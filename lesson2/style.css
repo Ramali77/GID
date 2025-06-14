@@ -1,0 +1,387 @@
+body {
+  background: rgb(255, 255, 255);
+}
+
+#r-square {
+    width: 800px;
+    height: 800px;
+    margin: 50px auto 10px;
+    border: 3px solid black;
+    position: relative;
+    background: #f447ff;
+}
+
+.b-square11 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: black;
+}
+.b-square11:hover {
+    background: #333333;
+}
+
+.b-square12 {
+    width: 100px;
+    height: 100px;
+    left: 200px;
+    top: 0px;
+    position: absolute;
+    background: black;
+}
+.b-square12:hover {
+    background: #333333;
+}
+
+.b-square13 {
+    width: 100px;
+    height: 100px;
+    left: 400px;
+    position: absolute;
+    background: black;
+}
+.b-square13:hover {
+    background: #333333;
+}
+.b-square14 {
+    width: 100px;
+    height: 100px;
+    left: 600px;
+    position: absolute;
+    background: black;
+}
+.b-square14:hover {
+    background: #333333;
+}
+
+
+.b-square21 {
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    position: absolute;
+    background: black;
+}
+.b-square21:hover {
+    background: #333333;
+}
+
+.b-square22 {
+    width: 100px;
+    height: 100px;
+    left: 300px;
+    top: 100px;
+    position: absolute;
+    background: black;
+}
+.b-square22:hover {
+    background: #333333;
+}
+
+.b-square23 {
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 500px;
+    position: absolute;
+    background: black;
+}
+.b-square23:hover {
+    background: #333333;
+}
+.b-square24 {
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 700px;
+    position: absolute;
+    background: black;
+}
+.b-square24:hover {
+    background: #333333;
+}
+
+.b-square31 {
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 200px;
+    position: absolute;
+    background: black;
+}
+.b-square31:hover {
+    background: #333333;
+}
+
+.b-square32 {
+    width: 100px;
+    height: 100px;
+    left: 200px;
+    top: 200px;
+    position: absolute;
+    background: black;
+}
+.b-square32:hover {
+    background: #333333;
+}
+
+.b-square33 {
+    width: 100px;
+    height: 100px;
+    top: 200px;
+    left: 400px;
+    position: absolute;
+    background: black;
+}
+.b-square33:hover {
+    background: #333333;
+}
+.b-square34 {
+    width: 100px;
+    height: 100px;
+    top: 200px;
+    left: 600px;
+    position: absolute;
+    background: black;
+}
+.b-square34:hover {
+    background: #333333;
+}
+
+.b-square41 {
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 300px;
+    position: absolute;
+    background: black;
+}
+.b-square41:hover {
+    background: #333333;
+}
+
+.b-square42 {
+    width: 100px;
+    height: 100px;
+    left: 300px;
+    top: 300px;
+    position: absolute;
+    background: black;
+}
+.b-square42:hover {
+    background: #333333;
+}
+
+.b-square43 {
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 500px;
+    position: absolute;
+    background: black;
+}
+.b-square43:hover {
+    background: #333333;
+}
+.b-square44 {
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 700px;
+    position: absolute;
+    background: black;
+}
+.b-square44:hover {
+    background: #333333;
+}
+
+
+.b-square51 {
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 400px;
+    position: absolute;
+    background: black;
+}
+.b-square51:hover {
+    background: #333333;
+}
+
+.b-square52 {
+    width: 100px;
+    height: 100px;
+    left: 200px;
+    top: 400px;
+    position: absolute;
+    background: black;
+}
+.b-square52:hover {
+    background: #333333;
+}
+
+.b-square53 {
+    width: 100px;
+    height: 100px;
+    top: 400px;
+    left: 400px;
+    position: absolute;
+    background: black;
+}
+.b-square53:hover {
+    background: #333333;
+}
+.b-square54 {
+    width: 100px;
+    height: 100px;
+    top: 400px;
+    left: 600px;
+    position: absolute;
+    background: black;
+}
+.b-square54:hover {
+    background: #333333;
+}
+
+.b-square61 {
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 500px;
+    position: absolute;
+    background: black;
+}
+.b-square61:hover {
+    background: #333333;
+}
+
+.b-square62 {
+    width: 100px;
+    height: 100px;
+    left: 300px;
+    top: 500px;
+    position: absolute;
+    background: black;
+}
+.b-square62:hover {
+    background: #333333;
+}
+
+.b-square63 {
+    width: 100px;
+    height: 100px;
+    top: 500px;
+    left: 500px;
+    position: absolute;
+    background: black;
+}
+.b-square63:hover {
+    background: #333333;
+}
+.b-square64 {
+    width: 100px;
+    height: 100px;
+    top: 500px;
+    left: 700px;
+    position: absolute;
+    background: black;
+}
+.b-square64:hover {
+    background: #333333;
+}
+
+
+.b-square71 {
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    top: 600px;
+    position: absolute;
+    background: black;
+}
+.b-square71:hover {
+    background: #333333;
+}
+
+.b-square72 {
+    width: 100px;
+    height: 100px;
+    left: 200px;
+    top: 600px;
+    position: absolute;
+    background: black;
+}
+.b-square72:hover {
+    background: #333333;
+}
+
+.b-square73 {
+    width: 100px;
+    height: 100px;
+    top: 600px;
+    left: 400px;
+    position: absolute;
+    background: black;
+}
+.b-square73:hover {
+    background: #333333;
+}
+.b-square74 {
+    width: 100px;
+    height: 100px;
+    top: 600px;
+    left: 600px;
+    position: absolute;
+    background: black;
+}
+.b-square74:hover {
+    background: #333333;
+}
+
+.b-square81 {
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 700px;
+    position: absolute;
+    background: black;
+}
+.b-square81:hover {
+    background: #333333;
+}
+
+.b-square82 {
+    width: 100px;
+    height: 100px;
+    left: 300px;
+    top: 700px;
+    position: absolute;
+    background: black;
+}
+.b-square82:hover {
+    background: #333333;
+}
+
+.b-square83 {
+    width: 100px;
+    height: 100px;
+    top: 700px;
+    left: 500px;
+    position: absolute;
+    background: black;
+}
+.b-square83:hover {
+    background: #333333;
+}
+.b-square84 {
+    width: 100px;
+    height: 100px;
+    top: 700px;
+    left: 700px;
+    position: absolute;
+    background: black;
+}
+.b-square84:hover {
+    background: #333333;
+}
