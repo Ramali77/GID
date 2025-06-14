@@ -1,0 +1,81 @@
+:root {
+  --background: #dcdcdc;
+  --text: #141414;
+  --action: red;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  background: var(--background);
+  color: var(--text);
+  font-family: ;
+}
+
+/* Адаптив большой десктоп */
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  margin: auto;
+}
+
+div::after {
+  content: '';
+  width: 70vw;
+  height: 18px;
+  background: var(--action);
+}
+
+/* Адаптив маленький десктоп / горизонтальный (landscape) планшет */
+/* @media (max-width: 1376px) and (min-width: 1025px) { */
+@media (max-width: 1376px) {
+  :root {
+    --action: green;
+  }
+
+  /* div {
+    background: green;
+  } */
+}
+
+/* Адаптив вертикальный (portrait) планшет */
+@media (max-width: 1024px) and (orientation: portrait) {
+  :root {
+    --action: blue;
+  }
+
+  /* div {
+    background: blue;
+  } */
+}
+
+/* Адаптив мобилка */
+@media (max-width: 660px) {
+  :root {
+    --action: orange;
+  }
+
+  /* div {
+    background: orange;
+  } */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141414;
+    --text: #dcdcdc;
+    --action: #00ff2b;
+  }
+
+  /* body {
+    background: rgb(20, 20, 20);
+  } */
+}
