@@ -484,8 +484,7 @@ h2 {
   .fontFeatureFigureLines {
     top: 34px;
     height: 72px;
-    border-top: 3px solid #2c2c2c;
-    border-bottom: 3px solid #2c2c2c;
+    border: 3px solid #2c2c2c;
   }
 
   .fontFeatureFigureFrame {
