@@ -16,18 +16,19 @@ body {
 
 .block1 {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   width: 100%;
-  color: #00ff1e;
   padding: 30px 20px;
+  text-align: center;
+  color: #00ff1e;
 }
 
 #div_line {
   text-align: center;
   color: #444;
   font-size: 24px;
-  padding: 100px 0px;
+  padding: 50px 0px;
 }
 
 pre {
@@ -57,6 +58,10 @@ h2 {
 
 .magenta {
   color: #ff00dd;
+}
+
+.boloto {
+  color: #D4FF00;
 }
 
 .TitleSection {
@@ -209,7 +214,16 @@ h2 {
   align-items: center;
   width: 100%;
   padding: 50px;
-  height: 400px;
+  height: 800px;
+}
+
+.BottomBlock {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  padding: 50px;
+  height: 100%;
 }
 
 
@@ -431,6 +445,61 @@ h2 {
   color: #ffffff;
 }
 
+.fontFeatureFigureFrame1 {
+    position: absolute;
+    top: 44px;
+    left: 20px;
+    height: 72px;
+    align-items: center;
+    border: 3px solid #878787;
+  }
+
+.fontFeatureFigureComment1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+.fontFeatureFigureFrame2 {
+    position: absolute;
+    rotate: -10deg;
+    top: 115px;
+    left: 40px;
+    height: 102px;
+    align-items: center;
+    border: 3px solid #878787;
+  }
+
+.fontFeatureFigureComment2 {
+    font-size: 100px;
+    line-height: 80px;
+    color: #1d21fe;
+  }
+
+  .fontFeatureFigureFrame3 {
+    position: absolute;
+    rotate: 5deg;
+    top: 300px;
+    left: 50px;
+    height: 102px;
+    align-items: center;
+    border: 3px solid #878787;
+  }
+
+.fontFeatureFigureComment3 {
+    font-size: 90px;
+    line-height: 80px;
+    color: #ffffff;
+  }
+
+
+
+.Avtograph {
+    position: absolute;
+    bottom: 34px;
+    right: 50px;
+    height: 250px;
+    color: #00ff1e;
+  }
 
 
 @media (max-width: 1336px) {
@@ -484,17 +553,13 @@ h2 {
   .fontFeatureFigureLines {
     top: 34px;
     height: 72px;
-    border: 3px solid #2c2c2c;
-  }
-
-  .fontFeatureFigureFrame {
-    top: 34px;
-    height: 72px;
-    border: 3px solid #2c2c2c;
+    border-top: 3px solid #2c2c2c;
+    border-bottom: 3px solid #2c2c2c;
   }
 
   .fontFeatureFigureText {
     font-size: 106px;
     line-height: 133px;
   }
+
 }
