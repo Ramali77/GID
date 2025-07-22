@@ -83,23 +83,45 @@ h2 {
   min-width: 546px;
 }
 
+
 .TitleRight {
+  align-items: center;
+  position: relative;
+  min-width: 546px;
+  height: 350px;
+}
+
+.TitleRightContaner {
   display: flex;
-  flex-direction: column;
-  align-items: left;
+  position: relative;
+  align-items: center;
   width: 446px;
   min-width: 446px;
+  height: 100%;
 }
 
 .TitleDivider {
+  position: absolute;
+  left: 0px;
+  top: 40px;
   width: 12px;
-  height: 300px;
+  height: 210px;
   background-color: #00ff1e;
 }
 
-.title-text{
+.Title-text{
+  position: absolute;
   justify-content: left;
+  left: 40px;
+  top: 20px;
   padding: 0px;
+ 
+}
+
+.Author-text{
+  position: absolute;
+  left: 0px;
+  top: 290px;
 }
 
 .glyphsSection {
@@ -503,6 +525,7 @@ h2 {
 
 
 @media (max-width: 1336px) {
+
   h2 {
     font-size: 46px;
     line-height: 58px;
@@ -561,5 +584,112 @@ h2 {
     font-size: 106px;
     line-height: 133px;
   }
+
+}
+
+/* Адаптив специальный */
+@media (max-width: 1146px) {
+
+.TitleSection{ 
+  flex-direction: column;
+  height: 700px;
+  gap: 0px;
+  min-width: 10px;
+}
+
+
+.Title-text > h1 > br{display:none}
+.Author-text > p > br{display:none}
+
+.TitleRight {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  align-items: center;
+ }
+
+.TitleRightContaner {
+  width: 600px;
+  min-width: 500px;
+}
+
+pre {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+  h1 {
+    font-size: 55px;
+  }
+
+.TitleDivider {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  width: 12px;
+  height:100px;
+  background-color: #00ff1e;
+}
+
+.Title-text{
+  position: absolute;
+  justify-content: left;
+  left: 40px;
+  top: 50px; 
+}
+
+.Author-text{
+  position: absolute;
+  left: 40px;
+  top: 120px;
+}
+
+
+
+
+
+}
+
+/* Адаптив мобилка */
+@media (max-width: 660px) {
+
+.block3 > div > h2{display:none}  
+
+h1 {
+   font-size: 30px;
+}
+
+h2 {
+   font-size: 22px;
+}
+
+.font-ExtraLight{
+ padding-left: 15px;
+}
+
+.font-Light{
+ padding-left: 15px;
+}
+
+.font-Normal{
+ padding-left: 15px;
+}
+
+.font-Medium {
+ padding-left: 15px;
+}
+
+.font-SemiBold {
+ padding-left: 15px;
+}
+
+.font-Bold{
+ padding-left: 15px;
+}
+
+.font-ExtraBold{
+ padding-left: 15px;
+}
 
 }
