@@ -2,12 +2,21 @@
   box-sizing: border-box;
 }
 
+
 html,
 body {
-  height: 100%;
-  font-family: 'Stalinist One';
-  background-color: var(--purple);
-  overflow-x: hidden;
+  background: url("../images/bgr3.jpg");
+  background-size: contain;
+}
+
+.main
+{
+  overflow: hidden;
+  min-width: 900px;
+  width: 1440px;
+  margin: 0px auto 0px;
+  border: 3px solid black;
+  position: relative;
 }
 
 .poster-header{
@@ -17,39 +26,28 @@ body {
   background-color:black;
   padding: 20px;
   font-family: 'Stalinist One'; 
-  right: -50px;
+  right: -200px;
   /* overflow: hidden; */
-  transform: rotate(12deg);
+  transform: rotate(32deg);
 }
 
 @keyframes MoveHead{
   0% {transform: translateX(0)}
-  50% {transform: translateX(-42.3%);}
+  50% {transform: translateX(-42.3%)}
   100% {transform: translateX(0)}
 }
 
-@keyframes Music{
-  0% {transform: scaleY(1.0);}
-  50% {transform: scaleY(0.4);}
-  100% {transform: scaleY(1.0);}
-}
-
 .RunningStroke{
-  /* margin-bottom: 20px; */
   animation: MoveHead 10s ease-in-out infinite;
   font-size: 100px;
   text-wrap: nowrap;
 }
 
-.The_equalizer{
-  animation: Music 8s ease-in-out infinite;
-}
 
-.Сontainer2
+.СontainerHead
 { 
  display: flex;
  flex-direction: row;
- background-color: var(--sky-blue);
  gap: 10px;
 }
 
@@ -64,22 +62,21 @@ body {
   height: 500px;
   width: 30vw;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 60px;
-background: linear-gradient(var(--purple) 20%, rgb(0, 0, 0) 80%);}
+}
 
 .MikyMouse{
   height: 500px;
   width: 30vw;
-  border: solid 10px;
-  border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 60px;
   background-color: rgb(100, 161, 139);
 }
+
 .FastFood3{
   height: 500px;
   width: 30vw;
@@ -90,15 +87,14 @@ background: linear-gradient(var(--purple) 20%, rgb(0, 0, 0) 80%);}
   background: radial-gradient(green 20%, rgb(0, 0, 0) 80%);
 }
 
-.image2 {
+.image2{
     background: url("../images/grafiti_1.png") no-repeat;
     /* width: 100%; */
     height: 100%;
     background-size: contain;
 }
 
-.Сontainer3
-{ 
+.Сontainer3{ 
   height: 500px;
   display: flex;
   flex-direction: row;
@@ -107,18 +103,219 @@ background: linear-gradient(var(--purple) 20%, rgb(0, 0, 0) 80%);}
   gap: 20px;
 }
 
-.muz1 {
-  height: 400px;
-  width: 10px;
+.container {
   display: flex;
-  background: linear-gradient(var(--purple) 20%, rgb(255, 255, 255) 80%);
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  width: 700px;
+  /* padding-top: 50px; */
+  padding-bottom: 50px;
 }
 
-.muz2 {
-  height: 400px;
-  width: 10px;
+.box {
   display: flex;
-  align-items: ;
-  background: linear-gradient(var(--sky-blue) 20%, rgb(255, 255, 255) 80%);
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 700px;
+  height: 250px;
 }
 
+@keyframes go-up-down {
+  0% { height: 70px;   background-color: rgb(252, 150, 245); }
+  100% { height: 200px; background-color:rgb(101, 157, 138);}
+}
+
+.line-1 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+}
+
+.line-2 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 250ms;
+}
+
+.line-3 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 500ms;
+}
+
+.line-4 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 750ms;
+}
+
+.line-5 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 1000ms;
+}
+
+.line-6 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 1250ms;
+}
+
+.line-7 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 1500ms;
+}
+
+.line-8 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 1750ms;
+}
+
+.line-9 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 2000ms;
+}
+
+.line-10 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 2250ms;
+}
+
+.DarkLine {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+}
+
+.Text1 {
+  text-align: right;
+  font-size: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;  
+  line-height: 36px;
+}
+
+.ContainerText1{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+}
+
+.ContainerFlowers{
+  display: flex;
+  justify-content: space-between;
+  /* position: absolute; 
+  top: 0px;
+  left: 10px;*/
+  width: 100%;
+  padding-top: 50px; 
+  padding-bottom: 50px;
+  padding-left: 50px;
+  margin-left: 250px;
+ }
+
+.FlowerBox {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: url("../images/flower.svg") no-repeat;
+}
+
+.StarBox {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: url("../images/star.svg") no-repeat;
+}
+
+@keyframes StarRtation 
+{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+
+.StarBox:hover {  
+  animation: StarRtation 0.7s infinite alternate;
+}
+
+.StarYBox:hover {  
+  animation: StarRtation 0.7s infinite alternate;
+}
+
+.FlowerBox:hover {  
+  background: url("../images/flower-y.svg") no-repeat;
+  background-size: contain;
+}
+
+.FlowerYBox {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: url("../images/flower-y.svg") no-repeat;
+  background-size: contain;
+}
+
+.FlowerYBox:hover {  
+  background: url("../images/flower.svg") no-repeat;
+  background-size: contain;
+}
+
+.StarYBox {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: url("../images/star-y.svg") no-repeat;
+  background-size: contain;
+}
+
+.Text2 {
+  text-align: right;
+  font-size: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;  
+  line-height: 36px;
+}
+
+.ContainerText2{
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  transform: rotate(-90deg);
+}
