@@ -33,8 +33,8 @@ body {
   justify-content: space-between;
 }
 svg {
-  width: 80%;
-  height: 50%;
+  width: 27%;
+/* height: 50%;*/
   background: #eee;
   margin-bottom: 5%;
 }
