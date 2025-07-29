@@ -241,9 +241,6 @@ body {
 .ContainerFlowers{
   display: flex;
   justify-content: space-between;
-  /* position: absolute; 
-  top: 0px;
-  left: 10px;*/
   width: 100%;
   padding-top: 50px; 
   padding-bottom: 50px;
@@ -251,11 +248,27 @@ body {
   margin-left: 250px;
  }
 
-.FlowerBox {
+ .ContainerMiky{
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  padding-top: 50px; 
+  padding-bottom: 50px;
+  padding-left: 50px;
+ }
+
+ .FlowerBox {
   position: relative;
   width: 180px;
   height: 180px;
   background: url("../images/flower.svg") no-repeat;
+}
+
+.MikkyBox {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  /* background: url("../images/flower.svg") no-repeat; */
 }
 
 .StarBox {
