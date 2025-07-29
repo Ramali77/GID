@@ -7,6 +7,8 @@ body {
   height: 100%;
   font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
   font-weight: 500;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -519,7 +521,7 @@ h2 {
     position: absolute;
     bottom: 34px;
     right: 50px;
-    height: 250px;
+    /* height: 250px; */
     color: #00ff1e;
   }
 
@@ -661,7 +663,7 @@ h1 {
 }
 
 h2 {
-   font-size: 22px;
+   font-size: 30px;
 }
 
 .font-ExtraLight{
@@ -691,5 +693,59 @@ h2 {
 .font-ExtraBold{
  padding-left: 15px;
 }
+
+pre {
+        font-size: 12px;
+        line-height: 14px;
+    }
+.TitleSection{
+  height: 570px;
+}
+
+.TitleRightContaner {
+        margin-left: 80px;
+    }
+
+.fontFeatureDivider {
+  display: none;
+} 
+
+.fontFeaturesRow {
+  flex-direction: column;
+  gap: 42px;
+  min-width: 500px;
+  padding: 0 42px;
+}
+
+.font-ExtraLight {
+    font-weight: 200;
+    font-size: 24px;
+}
+
+
+.font-ExtraLightIt {
+    font-size: 24px;  
+ }
+
+ .block5 {
+  padding: 50px 0;
+ }
+
+  .fontFeaturesSection {
+    gap: none;
+    padding: 0;
+}
+
+.fontFeatureFigureComment1 {
+    font-size: 28px;
+    line-height: 20px;}
+
+.fontFeatureFigureComment2 {
+    font-size: 44px;
+    line-height: 20px;}
+
+.fontFeatureFigureComment3 {
+    font-size: 50px;
+    line-height: 18px;}
 
 }
