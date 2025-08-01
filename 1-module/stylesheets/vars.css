@@ -1,0 +1,16 @@
+:root {
+  --almost-black: #2c2c2c;
+  --acid-green: #d4ff00;
+  --purple: #d870ae;
+  --sky-blue: #82E2FF;
+  --body-color: #D9CDC6;
+  --pink-pink: rgb(252, 150, 245);
+  
+  --large-padding: 200px;
+  --small-padding: 100px;
+  --tiny-padding: 50px;
+
+  --h1-font-size: 60px;
+  --h2-font-size: 40px;
+  --h3-font-size: 20px;
+}

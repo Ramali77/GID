@@ -1,80 +1,695 @@
-:root {
-  --background: #dcdcdc;
-  --text: #141414;
-  --action: red;
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
   height: 100%;
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+  font-weight: 500;
 }
 
 body {
-  display: flex;
-  background: var(--background);
-  color: var(--text);
+  background-color: #0f0f0f;
+  color: white;
 }
 
-/* Адаптив большой десктоп */
-div {
+.block1 {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100px;
-  margin: auto;
+  align-items: center;
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  color: #00ff1e;
 }
 
-div::after {
-  content: '';
-  width: 70vw;
-  height: 18px;
-  background: var(--action);
+#div_line {
+  text-align: center;
+  color: #444;
+  font-size: 24px;
+  padding: 50px 0px;
 }
 
-/* Адаптив маленький десктоп / горизонтальный (landscape) планшет */
-/* @media (max-width: 1376px) and (min-width: 1025px) { */
-@media (max-width: 1376px) {
-  :root {
-    --action: green;
+pre {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+h1{
+  font-size: 60pt;
+  justify-content: left;
+  color: #ffffff;
+}
+
+h2 {
+  color: #444;
+  text-align: center;
+  font-size: 64px;
+}
+
+.acidGreen {
+  color: #00ff1e;
+}
+
+.electricBlue {
+  color: #1d21fe;
+}
+
+.magenta {
+  color: #ff00dd;
+}
+
+.boloto {
+  color: #D4FF00;
+}
+
+.TitleSection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  min-width: 1336px;
+  padding: 0 60px;
+  background-image: url("img/bgr_01.png");
+}
+
+.TitleLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 546px;
+  min-width: 546px;
+}
+
+
+.TitleRight {
+  align-items: center;
+  position: relative;
+  min-width: 546px;
+  height: 350px;
+}
+
+.TitleRightContaner {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 446px;
+  min-width: 446px;
+  height: 100%;
+}
+
+.TitleDivider {
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  width: 12px;
+  height: 210px;
+  background-color: #00ff1e;
+}
+
+.Title-text{
+  position: absolute;
+  justify-content: left;
+  left: 40px;
+  top: 20px;
+  padding: 0px;
+ 
+}
+
+.Author-text{
+  position: absolute;
+  left: 0px;
+  top: 290px;
+}
+
+.glyphsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  padding: 80px 100px;
+  background: #828282;
+}
+
+.glyphsSamples {
+  width: 1240px;
+  color: #000;
+  font-size: 42px;
+  line-height: 53px;
+}
+
+.fontFeaturesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.fontFeatures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+}
+
+.fontFeaturesRow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  min-width: 1336px;
+  padding: 0 60px;
+}
+
+.fontFeatureDivider {
+  width: 4px;
+  height: 265px;
+  background-color: #2c2c2c;
+}
+
+.fontFeature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 546px;
+  min-width: 546px;
+}
+
+.fontFeatureText {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.fontFeatureFigure {
+  position: relative;
+}
+
+.fontFeatureFigureLines {
+  position: absolute;
+  z-index: 0;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  height: 104px;
+  border-top: 4px solid #2c2c2c;
+  border-bottom: 4px solid #2c2c2c;
+}
+
+.fontFeatureFigureText {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  font-size: 150px;
+  line-height: 189px;
+}
+
+.block3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.block5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+}
+
+.block6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 50px;
+  height: 800px;
+}
+
+.BottomBlock {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  padding: 50px;
+  height: 100%;
+}
+
+
+
+.fontStyleRowExtraLight {
+  width: 100%;
+  margin: 50px 0 0;
+  display: flex; 
+  height: 100px;
+  justify-content: center; 
+  align-items: center;
+  gap: 60px;
+  line-height: 100px;
+  color: #444444;
+
+}
+
+.font-ExtraLight{
+  font-weight: 200;  
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px;
+  color: #ffffff;
+}
+
+.font-ExtraLightIt{
+  font-weight: 200;  
+  font-style: italic;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px;
+  color: #ffffff;
+}
+
+
+
+.fontStyleRowLight {
+  width: 100%;
+  display: flex; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  line-height: 100px;
+  color: #444444;
+  background: #111111;
+}
+
+.font-Light{
+  font-weight: 300;  
+  font-style: light;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px;
+  color: #ffffff;
+}
+
+.font-LightIt{
+  font-weight: 300;  
+  font-style: italic;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px; 
+  color: #ffffff;
+}
+
+
+
+.fontStyleRowNormal {
+  width: 100%;
+  display: flex; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  line-height: 100px;
+  color: #444444;
+  background: #151515;
+}
+
+.font-Normal{
+  font-weight: 400;  
+  font-style: light;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px;
+  color: #ffffff;
+}
+
+.font-NormalIt{
+  font-weight: 400;  
+  font-style: italic;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px; 
+  color: #ffffff;
+}
+
+.fontStyleRowMedium {
+  width: 100%;
+  display: flex; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  line-height: 100px;
+  color: #444444;
+  background: #1E1E1E;
+}
+
+.font-Medium{
+  font-weight: 500;  
+  font-style: light;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px;
+  color: #ffffff;
+}
+
+.font-MediumIt{
+  font-weight: 500;  
+  font-style: italic;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px; 
+  color: #ffffff;
+}
+
+
+.fontStyleRowSemiBold {
+  width: 100%;
+  display: flex; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  line-height: 100px;
+  color: #444444;
+  background: #252525;
+}
+
+.font-SemiBold{
+  font-weight: 600;  
+  font-style: light;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px;
+  color: #ffffff;
+}
+
+.font-SemiBoldIt{
+  font-weight: 600;  
+  font-style: italic;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px; 
+  color: #ffffff;
+}
+
+
+.fontStyleRowBold {
+  width: 100%;
+  display: flex; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  line-height: 100px;
+  color: #444444;
+  background: #333333;
+}
+
+.font-Bold{
+  font-weight: 700;  
+  font-style: light;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px;
+  color: #ffffff;
+}
+
+.font-BoldIt{
+  font-weight: 700;  
+  font-style: italic;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px; 
+  color: #ffffff;
+}
+
+
+.fontStyleRowExtraBold {
+  width: 100%;
+  display: flex; 
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  line-height: 100px;
+  color: #333333;
+  background: #3F3F3F;
+}
+
+.font-ExtraBold{
+  font-weight: 800;  
+  font-style: light;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px;
+  color: #ffffff;
+}
+
+.font-ExtraBoldIt{
+  font-weight: 800;  
+  font-style: italic;
+  font-size: 24pt;
+  justify-content: left;
+  width: 300px; 
+  color: #ffffff;
+}
+
+.fontFeatureFigureFrame1 {
+    position: absolute;
+    top: 44px;
+    left: 20px;
+    height: 72px;
+    align-items: center;
+    border: 3px solid #878787;
   }
 
-  /* div {
-    background: green;
-  } */
-}
-
-/* Адаптив вертикальный (portrait) планшет */
-@media (max-width: 1024px) and (orientation: portrait) {
-  :root {
-    --action: blue;
+.fontFeatureFigureComment1 {
+    font-size: 60px;
+    line-height: 60px;
   }
 
-  /* div {
-    background: blue;
-  } */
+.fontFeatureFigureFrame2 {
+    position: absolute;
+    rotate: -10deg;
+    top: 115px;
+    left: 40px;
+    height: 102px;
+    align-items: center;
+    border: 3px solid #878787;
+  }
+
+.fontFeatureFigureComment2 {
+    font-size: 100px;
+    line-height: 80px;
+    color: #1d21fe;
+  }
+
+  .fontFeatureFigureFrame3 {
+    position: absolute;
+    rotate: 5deg;
+    top: 300px;
+    left: 50px;
+    height: 102px;
+    align-items: center;
+    border: 3px solid #878787;
+  }
+
+.fontFeatureFigureComment3 {
+    font-size: 90px;
+    line-height: 80px;
+    color: #ffffff;
+  }
+
+
+
+.Avtograph {
+    position: absolute;
+    bottom: 34px;
+    right: 50px;
+    height: 250px;
+    color: #00ff1e;
+  }
+
+
+@media (max-width: 1336px) {
+
+  h2 {
+    font-size: 46px;
+    line-height: 58px;
+  }
+
+  .glyphsSection {
+    gap: 42px;
+    padding: 56px 70px;
+  }
+
+  .glyphsSamples {
+    width: 882px;
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .fontFeaturesSection {
+    gap: 70px;
+    padding: 70px 0;
+  }
+
+  .fontFeatures {
+    gap: 70px;
+  }
+
+  .fontFeaturesRow {
+    gap: 42px;
+    min-width: 947px;
+    padding: 0 42px;
+  }
+
+  .fontFeatureDivider {
+    width: 3px;
+    height: 188px;
+  }
+
+  .fontFeature {
+    gap: 12px;
+    width: 388px;
+    min-width: 388px;
+  }
+
+  .fontFeatureText {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .fontFeatureFigureLines {
+    top: 34px;
+    height: 72px;
+    border-top: 3px solid #2c2c2c;
+    border-bottom: 3px solid #2c2c2c;
+  }
+
+  .fontFeatureFigureText {
+    font-size: 106px;
+    line-height: 133px;
+  }
+
+}
+
+/* Адаптив специальный */
+@media (max-width: 1146px) {
+
+.TitleSection{ 
+  flex-direction: column;
+  height: 700px;
+  gap: 0px;
+  min-width: 10px;
+}
+
+
+.Title-text > h1 > br{display:none}
+.Author-text > p > br{display:none}
+
+.TitleRight {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  align-items: center;
+ }
+
+.TitleRightContaner {
+  width: 600px;
+  min-width: 500px;
+}
+
+pre {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+  h1 {
+    font-size: 55px;
+  }
+
+.TitleDivider {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  width: 12px;
+  height:100px;
+  background-color: #00ff1e;
+}
+
+.Title-text{
+  position: absolute;
+  justify-content: left;
+  left: 40px;
+  top: 50px; 
+}
+
+.Author-text{
+  position: absolute;
+  left: 40px;
+  top: 120px;
+}
+
+
+
+
+
 }
 
 /* Адаптив мобилка */
 @media (max-width: 660px) {
-  :root {
-    --action: orange;
-  }
 
-  /* div {
-    background: orange;
-  } */
+.block3 > div > h2{display:none}  
+
+h1 {
+   font-size: 30px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #141414;
-    --text: #dcdcdc;
-    --action: #00ff2b;
-  }
+h2 {
+   font-size: 22px;
+}
 
-  /* body {
-    background: rgb(20, 20, 20);
-  } */
+.font-ExtraLight{
+ padding-left: 15px;
+}
+
+.font-Light{
+ padding-left: 15px;
+}
+
+.font-Normal{
+ padding-left: 15px;
+}
+
+.font-Medium {
+ padding-left: 15px;
+}
+
+.font-SemiBold {
+ padding-left: 15px;
+}
+
+.font-Bold{
+ padding-left: 15px;
+}
+
+.font-ExtraBold{
+ padding-left: 15px;
+}
+
 }
