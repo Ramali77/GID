@@ -7,6 +7,8 @@ body {
   height: 100%;
   font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
   font-weight: 500;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -519,7 +521,7 @@ h2 {
     position: absolute;
     bottom: 34px;
     right: 50px;
-    height: 250px;
+    /* height: 250px; */
     color: #00ff1e;
   }
 
@@ -655,13 +657,11 @@ pre {
 @media (max-width: 660px) {
 
 .block3 > div > h2{display:none}  
+.Author-text > p > br{display:flex}
+.Title-text > div > h2{display:none} 
 
-h1 {
+h1, h2 {
    font-size: 30px;
-}
-
-h2 {
-   font-size: 22px;
 }
 
 .font-ExtraLight{
@@ -692,4 +692,80 @@ h2 {
  padding-left: 15px;
 }
 
+pre {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+.TitleSection{
+  height: 570px;
+}
+
+.TitleRightContaner {
+        margin-left: 80px;
+    }
+
+.fontFeatureDivider {
+  display: none;
+} 
+
+.fontFeaturesRow {
+  flex-direction: column;
+  gap: 42px;
+  min-width: 500px;
+  padding: 0 42px;
+}
+
+.font-ExtraLight, .font-ExtraLightIt, .font-Light, .font-LightIt, .font-Normal, .font-NormalIt, .font-Medium, .font-MediumIt, .font-SemiBold, .font-SemiBoldIt, .font-Bold, .font-Bold, .font-ExtraBold, .font-ExtraBoldIt  {
+    font-size: 24px;
+}
+
+.block5 {
+ padding: 50px 0;
+}
+
+.fontFeaturesSection {
+  gap: none;
+  padding: 0;
+}
+
+.fontFeatureFigureComment1 {
+    font-size: 28px;
+    line-height: 20px;}
+
+.fontFeatureFigureComment2 {
+    font-size: 44px;
+    line-height: 35px;}
+
+.fontFeatureFigureComment3 {
+    font-size: 45px;
+    line-height: 40px;}
+
+}
+
+.TitleDivider {
+   height: 120px;
+}
+
+.glyphsSamples {
+    width: 100%;
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.fontFeatureFigureFrame1 {
+    height: 30px;
+}
+
+.fontFeatureFigureFrame2 {
+    height: 50px;
+}
+
+.fontFeatureFigureFrame3 {
+    height: 60px;
+    top:240px;
+}
+
+.block6{
+  height:600px;
 }
