@@ -597,8 +597,9 @@ h2 {
 @media (max-width: 1146px) {
 
 .TitleSection{ 
-  flex-direction: column;
-  height: 700px;
+  flex-direction: column;  
+  margin: 100px 0 0;
+  height: 650px;
   gap: 0px;
   min-width: 10px;
   background-image: url("img/bgr_02.png");
@@ -698,7 +699,8 @@ pre {
     }
 
 .TitleSection{
-  height: 570px;
+  height: 500px;
+  margin: 100px 0 0;
   background-image: url("img/bgr_02.png");
 }
 
