@@ -528,6 +528,10 @@ h2 {
 
 @media (max-width: 1336px) {
 
+  .TitleSection{
+    background-image: url("img/bgr_02.png");
+  }
+
   h2 {
     font-size: 46px;
     line-height: 58px;
@@ -597,8 +601,8 @@ h2 {
   height: 700px;
   gap: 0px;
   min-width: 10px;
+  background-image: url("img/bgr_02.png");
 }
-
 
 .Title-text > h1 > br{display:none}
 .Author-text > p > br{display:none}
@@ -695,6 +699,7 @@ pre {
 
 .TitleSection{
   height: 570px;
+  background-image: url("img/bgr_02.png");
 }
 
 .TitleRightContaner {
@@ -727,17 +732,18 @@ pre {
 
 .fontFeatureFigureComment1 {
     font-size: 28px;
-    line-height: 20px;}
+    line-height: 20px;
+  }
 
 .fontFeatureFigureComment2 {
     font-size: 44px;
-    line-height: 35px;}
+    line-height: 35px;
+  }
 
 .fontFeatureFigureComment3 {
     font-size: 45px;
-    line-height: 40px;}
-
-}
+    line-height: 40px;
+  }
 
 .TitleDivider {
    height: 120px;
@@ -764,4 +770,6 @@ pre {
 
 .block6{
   height:600px;
+}
+
 }
