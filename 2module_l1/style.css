@@ -1,0 +1,46 @@
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  background-color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  user-select: none;
+}
+
+.squaresContainer {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 1rem;
+  height: 5rem;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.red {
+  background-color: rgb(255, 0, 76);
+}
+
+.green {
+  background-color: rgb(180, 211, 180);
+}
+
+.blue {
+  background-color: rgb(79, 161, 194);
+}
+
+.black {
+  background-color: rgb(37, 37, 37);
+}
+
