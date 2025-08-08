@@ -699,7 +699,7 @@ pre {
     }
 
 .TitleSection{
-  height: 500px;
+  height: auto;
   margin: 60px 0 0;
   background-image: url("img/bgr_02.png");
 }
