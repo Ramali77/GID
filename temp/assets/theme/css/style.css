@@ -609,6 +609,7 @@ nav .mbr-section-btn {
 .row {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
+  justify-content: center;
 }
 
 .justify-content-center {
