@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спирограф с p5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+        }
+        .controls {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 200px;
+            width: 350px;
+            background-color: rgb(240,240,240,0.5);
+            z-index: 100;
+        }
+        .control-group {
+            margin-bottom: 20px;
+            text-align: center;
+            align-items: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+            justify-content: left;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border: 2px;
+            border-color: #020202;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background 0.3s;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background: #0065bd;
+        }
+        button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+        .canvas-container {
+            /* background: white; */
+            border-radius: 10px;
+            cursor: crosshair;
+            /* overflow: hidden; */
+        }
+        .info {
+            margin-top: 10px;
+            padding: 10px;
+            background: #e7f3ff;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .color-controls {
+            display: flex;
+            gap: 10px;
+            /* align-items: center; */
+            /* justify-items: center; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .color-preview {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+       
+        .fixed-param {
+            background: #e7f7e7;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .ratio-info {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .completion-info {
+            background: #e7f7e7;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 5px;
+            text-align: center;
+            font-size: 12px;
+        }
+        #info {
+            position: fixed;
+            top: 50px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .electricBlue {
+            color: #279aff;
+        }
+        #line-color {
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .squares-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-content: flex-start;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            transition: transform 0.2s ease;
+            background-color: rgb(5, 5, 5);
+        }
+        .square:hover {
+            transform: scale(1.1);
+        }
+        #s110-50 {
+            background: url(3_110-50.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s110-100 {
+            background: url(3_110-100.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s110-200 {
+            background: url(3_110-200.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s120-50 {
+            background: url(3_120-50.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s120-100 {
+            background: url(3_120-100.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s120-200 {
+            background: url(3_120-200.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s150-50 {
+            background: url(3_150-50.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s150-100 {
+            background: url(3_150-100.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s175-50 {
+            background: url(3_175-50.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s175-100 {
+            background: url(3_175-100.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s175-150 {
+            background: url(3_175-150.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s180-50 {
+            background: url(3_180-50.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s180-100 {
+            background: url(3_180-100.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s180-150 {
+            background: url(3_180-150.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s350-50 {
+            background: url(3_350-50.jpg) no-repeat;
+            background-size: cover;
+        }
+         #s350-100 {
+            background: url(3_350-100.jpg) no-repeat;
+            background-size: cover;
+        }
+         #s350-200 {
+            background: url(3_350-200.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s400-100 {
+            background: url(3_400-100.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s400-200 {
+            background: url(3_400-200.jpg) no-repeat;
+            background-size: cover;
+        }
+        #s400-300 {
+            background: url(3_400-300.jpg) no-repeat;
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="controls">
+            <div class="control-group">
+               
+                <div class="squares-container">
+                    <div class="square" id="s110-50" data-r="110" data-d="50"> </div>
+                    <div class="square" id="s110-100" data-r="110" data-d="100"> </div>
+                    <div class="square" id="s110-200" data-r="110" data-d="200"> </div>
+                    <div class="square" id="s120-50" data-r="120" data-d="50"> </div>
+                    <div class="square" id="s120-100" data-r="120" data-d="100"> </div>
+                    <div class="square" id="s120-200" data-r="120" data-d="200"> </div>
+                    <div class="square" id="s150-50" data-r="150" data-d="50"> </div>
+                    <div class="square" id="s150-100" data-r="150" data-d="100"> </div>
+                    <div class="square" id="s175-50" data-r="175" data-d="50"> </div>
+                    <div class="square" id="s175-100" data-r="175" data-d="100"> </div>
+                    <div class="square" id="s175-150" data-r="175" data-d="150"> </div>
+                    <div class="square" id="s180-50" data-r="180" data-d="50"> </div>
+                    <div class="square" id="s180-100" data-r="180" data-d="100"> </div>
+                    <div class="square" id="s180-150" data-r="180" data-d="150"> </div>
+                    <div class="square" id="s350-50" data-r="350" data-d="50"> </div>
+                    <div class="square" id="s350-100" data-r="350" data-d="100"> </div>
+                    <div class="square" id="s350-200" data-r="350" data-d="200"> </div>
+                    <div class="square" id="s400-100" data-r="400" data-d="100"> </div>
+                    <div class="square" id="s400-200" data-r="400" data-d="200"> </div>
+                    <div class="square" id="s400-300" data-r="400" data-d="300"> </div>
+                </div>
+
+            </div>
+
+
+            <div class="control-group">
+                <label for="line-color">Цвет линии:</label>
+                <div class="color-controls">
+                    <input type="color" id="line-color" value="#ff4444"> 
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="line-width">Толщина линии:</label>
+                <input type="range" id="line-width" min="2" max="20" value="2">
+            </div>
+
+            <button id="draw-button">Нарисовать</button>
+            
+            <div class="animation-controls">
+                <button id="pause-button" style="display: none;">Пауза</button>
+                <button id="reset-button">Сбросить</button>
+                <button id="save-btn"><span class="electricBlue">Сохранить</span></button>
+            </div>
+
+        </div>
+
+        <div class="canvas-container">
+            <div id="MyCanvas"></div>
+        </div>
+
+        <div id="info">Выберите центр круга кликом по canvas</div>
+        
+    </div>
+
+    <script>
+        const info = document.getElementById('info');
+        let isDrawing = false;
+        let isPaused = false;
+        let animationProgress = 0;
+        let currentParams = {
+            R: 500,  // Фиксированный радиус статора
+            r: 320,  // Начальный радиус ротора
+            d: 200,
+            lineColor: '#ff4444',
+            lineWidth: 2,
+            speed: 5
+        };
+        let loopDetected = false;
+        let startPoint = null;
+        let loopCount = 0;
+
+        function setup() {
+            const canvas = createCanvas(windowWidth, windowHeight);
+            canvas.parent('MyCanvas');
+            background(255);
+            setupEventListeners();
+        }
+
+        function draw() {
+            if (isDrawing && !isPaused) {
+                drawSpirographFrame();
+            }
+        }
+
+        function setupEventListeners() {
+
+        let centerPoint = null;
+
+        // Обработчик клика по canvas для выбора центра (вариант с mousemove)
+
+        document.getElementById('MyCanvas').addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            centerPoint = {
+                x: event.clientX - rect.left,
+                y: event.clientY - rect.top
+            };            
+        // Координаты
+        info.textContent = `Центр выбран: (${Math.round(centerPoint.x)}, ${Math.round(centerPoint.y)})`;
+        currentParams.x0 = parseInt(centerPoint.x);
+        currentParams.y0 = parseInt(centerPoint.y);
+
+        });
+
+            // Кнопки выбора радиуса ротора
+            const rotorOptions = document.querySelectorAll('.square');
+            rotorOptions.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    // Убираем активный класс у всех кнопок
+                    rotorOptions.forEach(opt => opt.classList.remove('active'));
+                    // Добавляем активный класс к выбранной кнопке
+                    e.target.classList.add('active');                    
+                    // Обновляем параметр
+                    currentParams.r = parseInt(e.target.dataset.r);
+                    currentParams.d = parseInt(e.target.dataset.d);
+                    updateRatioInfo();
+                });
+            });
+            
+           
+            // Цвет линии
+            document.getElementById('line-color').addEventListener('input', (e) => {
+                currentParams.lineColor = e.target.value;
+                document.getElementById('color-preview').style.backgroundColor = currentParams.lineColor;
+            });
+            
+            // Толщина линии
+            document.getElementById('line-width').addEventListener('input', (e) => {
+                currentParams.lineWidth = parseInt(e.target.value);
+                document.getElementById('line-width-value').textContent = currentParams.lineWidth;
+            });
+            
+            // Кнопки управления
+            document.getElementById('draw-button').addEventListener('click', () => {
+                toggleDrawing();
+            });
+            
+            document.getElementById('pause-button').addEventListener('click', () => {
+                togglePause();
+            });
+            
+            document.getElementById('reset-button').addEventListener('click', () => {
+                resetDrawing();
+            });
+
+            // Сохранение итоговой картинки
+            document.getElementById('save-btn').addEventListener('click', () => {
+                saveDrawing();
+            });
+        }
+
+
+        function toggleDrawing() {
+            if (isDrawing) {
+                stopDrawing();
+            } else {
+                startDrawing();
+            }
+        }
+
+        function startDrawing() {
+            isDrawing = true;
+            isPaused = false;
+            animationProgress = 0;
+            loopDetected = false;
+            startPoint = null;
+            loopCount = 0;
+            
+            document.getElementById('pause-button').style.display = 'block';
+            document.getElementById('draw-button').textContent = 'Остановить';
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+            isPaused = false;
+            document.getElementById('pause-button').style.display = 'none';
+            document.getElementById('draw-button').textContent = 'Нарисовать';
+            document.getElementById('pause-button').textContent = 'Пауза';
+        }
+
+        function togglePause() {
+            isPaused = !isPaused;
+            document.getElementById('pause-button').textContent = isPaused ? 'Продолжить' : 'Пауза';
+        }
+
+        function resetDrawing() {
+            stopDrawing();
+            background(255);
+            loopDetected = false;
+            startPoint = null;
+            previousPoint = null;
+            loopCount = 0;
+        }
+
+        function checkLoopCompletion(currentPoint, tolerance = 1) {
+            if (!startPoint) {
+                startPoint = currentPoint;
+                previousPoint = currentPoint;
+                return false;
+            }
+            
+            // Проверяем, вернулись ли мы близко к начальной точке
+            const distance = dist(currentPoint.x, currentPoint.y, startPoint.x, startPoint.y);
+            if (distance < tolerance) {                
+                    loopDetected = true;
+                    return true;                
+            }
+            return false;
+        }
+
+        function drawSpirographFrame() {
+            const { R, r, d, lineColor, lineWidth, speed, x0, y0 } = currentParams;
+            const centerX = x0;
+            const centerY = y0;
+            info.textContent = `Передано: (${centerX}, ${centerY})`;
+                      
+            const scale = 0.7;
+            
+            // // Увеличиваем прогресс анимации
+            animationProgress += 0.1;
+
+            
+            // Вычисляем координаты точки (гипотрохоида)
+            const t = animationProgress;
+            const x = centerX + scale * ((R - r) * cos(t) + d * cos((R - r) * t / r));
+            const y = centerY + scale * ((R - r) * sin(t) - d * sin((R - r) * t / r));
+            
+            const currentPoint = {x, y};
+            
+            // Проверяем завершение цикла
+            if (checkLoopCompletion(currentPoint)) {
+                stopDrawing();
+            }          
+            
+            // Рисуем линию            
+            stroke(lineColor);
+            strokeWeight(lineWidth);
+            noFill();
+                
+            beginShape();
+              vertex(previousPoint.x, previousPoint.y);
+              vertex(x, y);
+            endShape();
+
+            previousPoint = currentPoint;
+        }
+
+        // Вспомогательная функция для вычисления расстояния
+        function dist(x1, y1, x2, y2) {
+            return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+        }
+
+        // Сохраниние итоговой картинки
+        function saveDrawing() {
+            save('my_drawing.jpg');
+        }
+
+    </script>
+</body>
+</html>
