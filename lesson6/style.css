@@ -31,6 +31,7 @@ body {
   color: #444;
   font-size: 24px;
   padding: 50px 0px;
+  white-space: nowrap;
 }
 
 pre {
