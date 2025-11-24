@@ -1,0 +1,37 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  display: flex;
+  gap: 50px;
+  height: 100%;
+  background-color: aquamarine;
+
+  div {
+    flex-shrink: 1;
+    flex-grow: 1;
+    min-width: 10px;
+    background-color: black;
+  }
+}
+
+.inputWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+
+  input {
+    width: 300px;
+  }
+}
