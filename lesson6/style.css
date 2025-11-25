@@ -595,7 +595,7 @@ h2 {
 }
 
 /* Адаптив специальный */
-@media (max-width: 1146px) {
+@media (max-width: 900px) {
 
 .TitleSection{ 
   flex-direction: column;  
