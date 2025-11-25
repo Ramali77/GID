@@ -595,7 +595,7 @@ h2 {
 }
 
 /* Адаптив специальный */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
 .TitleSection{ 
   flex-direction: column;  
@@ -656,7 +656,7 @@ pre {
 }
 
 /* Адаптив мобилка */
-@media (max-width: 660px) {
+@media (max-width: 860px) {
 
 .block3 > div > h2{display:none}  
 .Author-text > p > br{display:flex}
