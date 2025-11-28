@@ -602,8 +602,7 @@ h2 {
   align-items: center;
  }
 
-.TitleRightContaner {
-  width: 600px;
+.TitleRightContaner {  
   min-width: 500px;
 }
 
@@ -613,7 +612,7 @@ pre {
 }
 
   h1 {
-    font-size: 55px;
+    font-size: 42px;
   }
 
 .TitleDivider {
