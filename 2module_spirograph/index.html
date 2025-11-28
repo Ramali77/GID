@@ -74,10 +74,8 @@
             cursor: not-allowed;
         }
         .canvas-container {
-            /* background: white; */
             border-radius: 10px;
             cursor: crosshair;
-            /* overflow: hidden; */
         }
         .info {
             margin-top: 10px;
@@ -90,8 +88,6 @@
         .color-controls {
             display: flex;
             gap: 10px;
-            /* align-items: center; */
-            /* justify-items: center; */
             margin-left: auto;
             margin-right: auto;
         }
@@ -242,15 +238,13 @@
             background: url(3_400-300.jpg) no-repeat;
             background-size: cover;
         }
-
     </style>
 </head>
 <body>
     
     <div class="container">
         <div class="controls">
-            <div class="control-group">
-               
+            <div class="control-group">               
                 <div class="squares-container">
                     <div class="square" id="s110-50" data-r="110" data-d="50"> </div>
                     <div class="square" id="s110-100" data-r="110" data-d="100"> </div>
@@ -273,10 +267,8 @@
                     <div class="square" id="s400-200" data-r="400" data-d="200"> </div>
                     <div class="square" id="s400-300" data-r="400" data-d="300"> </div>
                 </div>
-
             </div>
-
-
+            
             <div class="control-group">
                 <label for="line-color">Цвет линии:</label>
                 <div class="color-controls">
@@ -289,20 +281,18 @@
                 <input type="range" id="line-width" min="2" max="20" value="2">
             </div>
 
-            <button id="draw-button">Нарисовать</button>
-            
+            <button id="draw-button">Нарисовать</button>            
             <div class="animation-controls">
                 <button id="pause-button" style="display: none;">Пауза</button>
                 <button id="reset-button">Сбросить</button>
                 <button id="save-btn"><span class="electricBlue">Сохранить</span></button>
             </div>
-
         </div>
 
         <div class="canvas-container">
             <div id="MyCanvas"></div>
         </div>
-
+        
         <div id="info">Выберите центр круга кликом по canvas</div>
         
     </div>
@@ -369,8 +359,7 @@
                     currentParams.d = parseInt(e.target.dataset.d);
                     // updateRatioInfo();
                 });
-            });
-            
+            });            
            
             // Цвет линии
             document.getElementById('line-color').addEventListener('input', (e) => {
@@ -403,7 +392,6 @@
             });
         }
 
-
         function toggleDrawing() {
             if (isDrawing) {
                 stopDrawing();
@@ -418,8 +406,7 @@
             animationProgress = 0;
             loopDetected = false;
             startPoint = null;
-            loopCount = 0;
-            
+            loopCount = 0;            
             document.getElementById('pause-button').style.display = 'block';
             document.getElementById('draw-button').textContent = 'Остановить';
         }
@@ -472,7 +459,6 @@
             
             // // Увеличиваем прогресс анимации
             animationProgress += 0.1;
-
             
             // Вычисляем координаты точки (гипотрохоида)
             const t = animationProgress;
@@ -489,11 +475,10 @@
             // Рисуем линию            
             stroke(lineColor);
             strokeWeight(lineWidth);
-            noFill();
-                
+            noFill();                
             beginShape();
-              vertex(previousPoint.x, previousPoint.y);
-              vertex(x, y);
+            vertex(previousPoint.x, previousPoint.y);
+            vertex(x, y);
             endShape();
 
             previousPoint = currentPoint;
@@ -511,8 +496,8 @@
 
     </script>
 </body>
-
 </html>
+
 
 
 
