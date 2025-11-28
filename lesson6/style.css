@@ -117,8 +117,7 @@ h2 {
   justify-content: left;
   left: 40px;
   top: 20px;
-  padding: 0px;
- 
+  padding: 0px; 
 }
 
 .Author-text{
@@ -251,8 +250,6 @@ h2 {
   height: 100%;
 }
 
-
-
 .fontStyleRowExtraLight {
   width: 100%;
   margin: 50px 0 0;
@@ -263,7 +260,6 @@ h2 {
   gap: 60px;
   line-height: 100px;
   color: #444444;
-
 }
 
 .font-ExtraLight{
@@ -282,8 +278,6 @@ h2 {
   width: 300px;
   color: #ffffff;
 }
-
-
 
 .fontStyleRowLight {
   width: 100%;
@@ -314,8 +308,6 @@ h2 {
   width: 300px; 
   color: #ffffff;
 }
-
-
 
 .fontStyleRowNormal {
   width: 100%;
@@ -377,7 +369,6 @@ h2 {
   color: #ffffff;
 }
 
-
 .fontStyleRowSemiBold {
   width: 100%;
   display: flex; 
@@ -408,7 +399,6 @@ h2 {
   color: #ffffff;
 }
 
-
 .fontStyleRowBold {
   width: 100%;
   display: flex; 
@@ -438,7 +428,6 @@ h2 {
   width: 300px; 
   color: #ffffff;
 }
-
 
 .fontStyleRowExtraBold {
   width: 100%;
@@ -516,8 +505,6 @@ h2 {
     color: #ffffff;
   }
 
-
-
 .Avtograph {
     position: absolute;
     bottom: 34px;
@@ -526,9 +513,7 @@ h2 {
     color: #00ff1e;
   }
 
-
 @media (max-width: 1336px) {
-
   .TitleSection{
     background-image: url("img/bgr_02.png");
   }
@@ -595,7 +580,7 @@ h2 {
 }
 
 /* Адаптив специальный */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
 
 .TitleSection{ 
   flex-direction: column;  
