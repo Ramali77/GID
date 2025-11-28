@@ -33,7 +33,7 @@ body {
   justify-content: space-between;
 }
 svg {
-  width: 33%;
+  width: 250px;
   /* height: 50%; */
   background: #eee;
   margin-bottom: 5%;
