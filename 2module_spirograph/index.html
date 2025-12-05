@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0px;
+            overflow: hidden;
             background-color: #f0f0f0;
             display: flex;
             flex-direction: column;
@@ -74,8 +75,10 @@
             cursor: not-allowed;
         }
         .canvas-container {
+            /* background: white; */
             border-radius: 10px;
             cursor: crosshair;
+            /* overflow: hidden; */
         }
         .info {
             margin-top: 10px;
@@ -88,6 +91,8 @@
         .color-controls {
             display: flex;
             gap: 10px;
+            /* align-items: center; */
+            /* justify-items: center; */
             margin-left: auto;
             margin-right: auto;
         }
@@ -158,6 +163,12 @@
         .square:hover {
             transform: scale(1.1);
         }
+
+        .square.active {
+        border: 2px solid rgb(35, 35, 35) !important;
+        }
+
+
         #s110-50 {
             background: url(3_110-50.jpg) no-repeat;
             background-size: cover;
@@ -238,20 +249,31 @@
             background: url(3_400-300.jpg) no-repeat;
             background-size: cover;
         }
+
+        #circle {
+            position: absolute;
+            border: 2px dashed black; /* Пунктирная линия */
+            border-radius: 50%;
+            pointer-events: none; /* Чтобы круг не мешал взаимодействию с другими элементами */
+            transform: translate(-50%, -50%); /* Центрируем круг относительно курсора */
+            transition: width 0.1s, height 0.1s; /* Плавное изменение размера */
+        }
+
     </style>
 </head>
 <body>
     
     <div class="container">
         <div class="controls">
-            <div class="control-group">               
+            <div class="control-group">
+               
                 <div class="squares-container">
                     <div class="square" id="s110-50" data-r="110" data-d="50"> </div>
                     <div class="square" id="s110-100" data-r="110" data-d="100"> </div>
                     <div class="square" id="s110-200" data-r="110" data-d="200"> </div>
-                    <div class="square" id="s120-50" data-r="360" data-d="50"> </div>
-                    <div class="square" id="s120-100" data-r="360" data-d="100"> </div>
-                    <div class="square" id="s120-200" data-r="360" data-d="150"> </div>
+                    <div class="square" id="s120-50" data-r="120" data-d="50"> </div>
+                    <div class="square" id="s120-100" data-r="120" data-d="100"> </div>
+                    <div class="square" id="s120-200" data-r="120" data-d="200"> </div>
                     <div class="square" id="s150-50" data-r="150" data-d="50"> </div>
                     <div class="square" id="s150-100" data-r="150" data-d="100"> </div>
                     <div class="square" id="s175-50" data-r="175" data-d="50"> </div>
@@ -267,8 +289,10 @@
                     <div class="square" id="s400-200" data-r="400" data-d="200"> </div>
                     <div class="square" id="s400-300" data-r="400" data-d="300"> </div>
                 </div>
+
             </div>
-            
+
+
             <div class="control-group">
                 <label for="line-color">Цвет линии:</label>
                 <div class="color-controls">
@@ -281,18 +305,20 @@
                 <input type="range" id="line-width" min="2" max="20" value="2">
             </div>
 
-            <button id="draw-button">Нарисовать</button>            
+            <button id="draw-button">Нарисовать</button>
+            
             <div class="animation-controls">
                 <button id="pause-button" style="display: none;">Пауза</button>
                 <button id="reset-button">Сбросить</button>
                 <button id="save-btn"><span class="electricBlue">Сохранить</span></button>
             </div>
+
         </div>
 
         <div class="canvas-container">
             <div id="MyCanvas"></div>
         </div>
-        
+
         <div id="info">Выберите центр круга кликом по canvas</div>
         
     </div>
@@ -346,7 +372,7 @@
 
         });
 
-            // Кнопки выбора радиуса ротора
+            // ВЫбор ротора
             const rotorOptions = document.querySelectorAll('.square');
             rotorOptions.forEach(option => {
                 option.addEventListener('click', (e) => {
@@ -357,9 +383,10 @@
                     // Обновляем параметр
                     currentParams.r = parseInt(e.target.dataset.r);
                     currentParams.d = parseInt(e.target.dataset.d);
-                    // updateRatioInfo();
+                    updateRatioInfo();
                 });
-            });            
+            });
+            
            
             // Цвет линии
             document.getElementById('line-color').addEventListener('input', (e) => {
@@ -392,6 +419,7 @@
             });
         }
 
+
         function toggleDrawing() {
             if (isDrawing) {
                 stopDrawing();
@@ -406,7 +434,8 @@
             animationProgress = 0;
             loopDetected = false;
             startPoint = null;
-            loopCount = 0;            
+            loopCount = 0;
+            
             document.getElementById('pause-button').style.display = 'block';
             document.getElementById('draw-button').textContent = 'Остановить';
         }
@@ -453,12 +482,12 @@
             const { R, r, d, lineColor, lineWidth, speed, x0, y0 } = currentParams;
             const centerX = x0;
             const centerY = y0;
-            info.textContent = `Передано: (${centerX}, ${centerY})`;
-                      
-            const scale = 0.7;
+            info.textContent = `Передано: (${centerX}, ${centerY})`;       
+            // const scale = 0.7;
             
             // // Увеличиваем прогресс анимации
             animationProgress += 0.1;
+
             
             // Вычисляем координаты точки (гипотрохоида)
             const t = animationProgress;
@@ -475,10 +504,11 @@
             // Рисуем линию            
             stroke(lineColor);
             strokeWeight(lineWidth);
-            noFill();                
+            noFill();
+                
             beginShape();
-            vertex(previousPoint.x, previousPoint.y);
-            vertex(x, y);
+              vertex(previousPoint.x, previousPoint.y);
+              vertex(x, y);
             endShape();
 
             previousPoint = currentPoint;
@@ -494,11 +524,88 @@
             save('my_drawing.jpg');
         }
 
+
+        /////////////
+
+        // Создаем элемент окружности
+        const circle = document.createElement('div');
+        circle.id = 'circle';
+        document.body.appendChild(circle);
+
+        // Начальные параметры
+        let diameter = 600; // Начальный диаметр
+        let scale = 0.5; // Начальный масштаб
+        const minDiameter = 200; // Минимальный диаметр
+        const maxDiameter = 800; // Максимальный диаметр
+        const minScale = 0.3; // Минимальный масштаб
+        const maxScale = 0.9; // Максимальный масштаб
+        let isFollowing = true; // Флаг слежения за курсором
+        let flag = false; // Флаг нажатия на упр кнопки
+        let flag1 = false; // Тестовый флаг для кнопок
+
+
+        // Функция для обновления размера круга
+        function updateCircleSize() {
+            circle.style.width = diameter + 'px';
+            circle.style.height = diameter + 'px';
+        }
+
+        // Инициализируем круг и статус
+        updateCircleSize();
+        // updateStatus();
+
+        // Следим за движением мыши
+        document.addEventListener('mousemove', (e) => {
+            if (isFollowing) {
+                circle.style.left = e.clientX + 'px';
+                circle.style.top = e.clientY + 'px';
+            }
+        });
+
+        // Обрабатываем колесико мыши
+        document.addEventListener('wheel', (e) => {
+            e.preventDefault(); // Предотвращаем стандартное поведение прокрутки
+            
+            if (e.deltaY < 0) {
+                // Прокрутка вверх - увеличиваем диаметр и масштаб
+                diameter = Math.min(diameter + 10, maxDiameter);
+                scale = Math.min(scale + 0.01, maxScale);
+            } else {
+                // Прокрутка вниз - уменьшаем диаметр и масштаб
+                diameter = Math.max(diameter - 10, minDiameter);
+                scale = Math.max(scale - 0.01, minScale);
+            }
+            
+            updateCircleSize();
+        });
+
+        // Обрабатываем клик мыши для остановки/возобновления слежения
+        document.addEventListener('click', (e) => {
+
+            const element = event.target;
+
+            if(event.target.closest('.controls'))  {
+              console.log('Поймала кнопочку'); 
+              flag1 = true; // Нажата кнопка
+            }            
+            else if (element.classList.contains('square')) {
+                flag = true; // Выбрали ротер
+            } else {
+                circle.style.left = e.clientX + 'px';
+                circle.style.top = e.clientY + 'px';
+                isFollowing = !isFollowing; // Переключаем состояние
+            }
+            
+            // Если останавливаем слежение, фиксируем круг на текущей позиции
+            if (!isFollowing && !flag && !flag1) {
+                circle.style.left = e.clientX + 'px';
+                circle.style.top = e.clientY + 'px';
+                flag = false;
+                flag1 = false;
+            }            
+            
+        });        
+
     </script>
 </body>
 </html>
-
-
-
-
-
