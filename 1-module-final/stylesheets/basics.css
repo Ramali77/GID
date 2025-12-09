@@ -1,0 +1,646 @@
+html,
+body {
+  /* background: url("../images/bgr3.jpg"); */
+  background-color: #000000;
+  background-size: contain;
+}
+
+.main
+{
+  overflow: hidden;
+  background: url("../images/bgr3.jpg");
+  width: 1440px;
+  margin: 0px auto 0px;
+  border: 3px solid black;
+  position: relative;
+  z-index: 10;
+}
+
+/* фоновая */
+
+.svg-1:hover path {
+  d: path("M8,2 L2,8");
+}
+.svg-2:hover path {
+  d: path("M2,2 L5,8 L8,2");
+}
+.svg-3:hover path {
+  d: path("M2,2 Q2,8 8,8");
+}
+.svg-4:hover path {
+  d: path("M2,5 C2,2 8,2 8,5");
+}
+.svg-5:hover path {
+  d: path("M3,3 L8,3 L2,5 L8,5 L3,7 L7,7");
+}
+.svg-6:hover path {
+  d: path("M2,5 A 5 25 -15 0 1 8 8");
+}
+.svg-7:hover path {
+  d: path("M2,5 S2,14 4,5 S7,8 8,4")
+}
+.svg-8:hover path {
+  d: path("M5,2 Q 8,5 5,8")
+}
+.svg-9:hover path {
+  d: path("M2,2 Q8,2 5,5 T8,8")
+}
+
+
+.mbody {
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 10px;
+  max-width: 450px; 
+  /* justify-content: start; 
+  align-items: start; */
+  z-index: 1;
+}
+svg {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  /* background: #eee;   */
+  /* margin-bottom: 5%; */
+}
+svg polyline,
+svg line,
+svg path {
+  fill: none;
+  stroke: #d8eded;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: 0.2s;
+}
+
+.ThreeCol {
+  display: flex;
+}
+
+/* Фоновая конец */
+
+.poster-header{
+  height: 150px;
+  position: relative;
+  color: var(--body-color);
+  background-color:black;
+  padding: 20px;
+  font-family: 'Stalinist One'; 
+  right: -200px;
+  /* overflow: hidden; */
+  transform: rotate(32deg);
+}
+
+@keyframes MoveHead{
+  0% {transform: translateX(0)}
+  50% {transform: translateX(-42.3%)}
+  100% {transform: translateX(0)}
+}
+
+.RunningStroke{
+  animation: MoveHead 10s ease-in-out infinite;
+  font-size: 100px;
+  text-wrap: nowrap;
+}
+
+
+.СontainerHead{ 
+ display: flex;
+ flex-direction: row;
+ gap: 10px;
+}
+
+.image1 {
+    background: url("../images/girl_1.png") no-repeat;
+    width: 50vw; 
+    max-width: 400px;;
+    /* height: 100%; */
+    background-size: contain;
+}
+
+.Block_girl{
+  height: 500px;
+  width: 30vw;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  gap: 60px;
+}
+
+.Block2{
+  height: 700px;
+  position: relative;
+}
+
+.MikyMouse{
+  /* height: 500px; */
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  background-color: rgb(100, 161, 139);
+}
+
+.image2{
+    background: url("../images/grafiti_1.png") no-repeat;
+    /* width: 100%; */
+    /* height: 100%; */
+    background-size: contain;
+}
+
+.Сontainer3{ 
+  display: flex;
+  position: relative;
+  height: 1050px;
+  flex-direction: row;
+	justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  width: 700px;
+  /* padding-top: 50px; */
+  padding-bottom: 50px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 700px;
+  height: 250px;
+}
+
+@keyframes go-up-down {
+  0% { height: 70px;   background-color: rgb(252, 150, 245); }
+  100% { height: 200px; background-color:rgb(101, 157, 138);}
+}
+
+.line-1 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+}
+
+.line-2 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 250ms;
+}
+
+.line-3 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 500ms;
+}
+
+.line-4 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 750ms;
+}
+
+.line-5 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 1000ms;
+}
+
+.line-6 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 1250ms;
+}
+
+.line-7 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 1500ms;
+}
+
+.line-8 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 1750ms;
+}
+
+.line-9 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 2000ms;
+}
+
+.line-10 {
+  position: relative;
+  width: 25px;
+  height: 200px;
+  background-color: none;
+  animation: go-up-down 0.7s infinite alternate;
+  animation-delay: 2250ms;
+}
+
+.DarkLine {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+}
+
+.Text1 {
+  text-align: right;
+  font-size: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;  
+  line-height: 36px;
+}
+
+.ContainerText1{
+  display: flex;
+  position: absolute;
+  justify-content: right;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+}
+
+.ContainerFlowers{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 50px; 
+  padding-bottom: 50px;
+  padding-left: 50px;
+  margin-left: 250px;
+ }
+
+ .FlowerBox {
+  position: relative;
+  width: 12vw;
+  height: 12vw;
+  background: url("../images/flower.svg") no-repeat;
+}
+
+ .ContainerMiky{
+  display: flex;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: right;
+  width: 60vw;
+  gap: 20px;
+ }
+
+.MikkyBox1 {
+  border-radius: 20px;
+  border-color: black;
+  box-sizing: 2px;
+  width: 20vw; 
+  aspect-ratio: 1;
+  min-width: 160px;
+  max-width: 220px;
+  background: url("../images/mik1.png") no-repeat;
+  background-size: contain;
+}
+
+.MikkyBox2 {
+  border-radius: 20px;
+  border-color: black;
+  width: 20vw; 
+  aspect-ratio: 1;
+  min-width: 160px;
+  max-width: 220px;
+  background: url("../images/mik2.png") no-repeat;
+  background-size: contain;
+}
+
+.MikkyBox3 {
+  border-radius: 20px;
+  border-color: black;
+  width: 20vw; 
+  aspect-ratio: 1;
+  min-width: 160px;
+  max-width: 220px; 
+  background: url("../images/mik3.png") no-repeat;
+  background-size: contain;
+}
+
+.MikkyBox1:hover {  
+  background: url("../images/mik1-h.png") no-repeat;
+  background-size: contain;
+}
+
+.MikkyBox2:hover {  
+  background: url("../images/mik2-h.png") no-repeat;
+  background-size: contain;
+}
+
+.MikkyBox3:hover {  
+  background: url("../images/mik3-h.png") no-repeat;
+  background-size: contain;
+}
+
+
+.StarBox {
+  position: relative;
+  width: 12vw;
+  height: 12vw;
+  background: url("../images/star.svg") no-repeat;
+}
+
+@keyframes StarRtation 
+{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+
+.StarBox:hover {  
+  animation: StarRtation 0.7s infinite alternate;
+}
+
+.StarYBox:hover {  
+  animation: StarRtation 0.7s infinite alternate;
+}
+
+.FlowerBox:hover {  
+  background: url("../images/flower-y.svg") no-repeat;
+  background-size: contain;
+}
+
+.FlowerYBox {
+  position: relative;
+  width: 12vw;
+  height: 12vw;
+  background: url("../images/flower-y.svg") no-repeat;
+  background-size: contain;
+}
+
+.FlowerYBox:hover {  
+  background: url("../images/flower.svg") no-repeat;
+  background-size: contain;
+}
+
+.StarYBox {
+  position: relative;
+  width: 12vw;
+  height: 12vw;
+  background: url("../images/star-y.svg") no-repeat;
+  background-size: contain;
+}
+
+.Text2 {
+  text-align: right;
+  font-size: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;  
+  line-height: 36px;
+}
+
+.ContainerText2 {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  width: 300px;
+  transform: rotate(-90deg);
+  left: -50px;
+  top: 120px;
+}
+
+.ColorLine {
+    width: 100%;
+}
+
+.ColorLine img.wide {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.ColorLine img.tall {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}​
+
+.YellowLine {
+  height: 100px;
+  width: 100%;
+  background-color: #dddb00;
+  overflow: hidden;
+  background-size: contain;
+}
+
+.MovingLine {
+  width: 100%;
+  overflow: hidden;
+}
+
+.LineElement {
+  background-color: #dddb00;
+  display: flex;
+  width: 110vw;
+  animation: LineElement 1s linear infinite;
+}
+
+.LineElement div {
+  background-image: url(../images/Y-line-element.svg);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.LineElement:hover {
+    animation-play-state: paused;
+} 
+
+
+@keyframes LineElement{
+0% {transform: translate(0, 0);}
+100% {transform: translate(-8.4vw, 0);}
+}
+
+
+.LineElementB {
+  background-color: #000000;
+  display: flex;
+  width: 110vw;
+  animation: LineElement 1s linear infinite;
+}
+
+.LineElementB:hover {
+    animation-play-state: paused;
+} 
+
+
+.LineElementB div {
+  background-image: url(../images/B-line-element.svg);
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+
+@keyframes LineElementB{
+0% {transform: translate(0, 0);}
+100% {transform: translate(8.4vw, 0);}
+}
+
+
+
+.Point{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--purple);  
+}
+
+ .Points{
+  display: flex;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+ }
+
+ .RoseField{
+  height: 1000px;
+  width: 2200px;
+  position: absolute;
+  background-color:var(--purple);
+  left: -700px;
+  top: 500px;
+  transform: rotate(25deg);
+}
+
+.TextBig{
+  position: absolute;
+  top: 400px;
+  left: 20px;
+  font-size: 50px;
+  text-wrap: wrap;
+  font-family: "Stalinist One", sans-serif;
+  color: var(--almost-black);
+}
+
+.TextMBig{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 150px;
+  text-wrap: nowrap;
+  font-family: 'Source Code Pro';
+  color: var(--purple);
+}
+
+.ImgGame{
+    background: url("../images/game_color.png") no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 25vw;
+    min-width: 300px;
+    background-size: contain;
+}
+
+ .ImgGame:hover{
+  background: url("../images/game.png") no-repeat;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 25vw;
+  min-width: 300px;
+  background-size: contain;
+} 
+
+
+.BlockGrey{
+ width: 100%;
+ height: 500px;
+ position: absolute;
+ top: 500px;
+ background-color:var(--almost-black);
+ overflow: hidden;
+}
+
+.LinePurple{
+  height: 2px;
+  width: 1200px;
+  position: absolute;
+  background-color:var(--purple);
+  left: -200px;
+  top: 100px;
+  transform: rotate(-35deg);
+}
+
+.LineBlue{
+  height: 2px;
+  width: 1200px;
+  position: absolute;
+  background-color:var(--sky-blue);
+  left: -100px;
+  top: 400px;
+  transform: rotate(20deg);
+}
+
+.LineBlue2{
+  height: 2px;
+  width: 1200px;
+  position: absolute;
+  background-color:var(--sky-blue);
+  left: -300px;
+  top: 200px;
+  transform: rotate(-60deg);
+}
+
+/* Граффити блок */
+.GrafftyBlock{
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+  position: absolute;
+  right: 0px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color:var(--sky-blue);
+}
+
+.ImgGraffity{
+    background: url("../images/grafiti_1.png") no-repeat;
+    position: absolute;
+    width: 130%;
+    height: 100%;
+    z-index: 11;
+    background-size: contain;
+}
+
