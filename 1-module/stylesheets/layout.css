@@ -1,0 +1,103 @@
+@media (max-width: 3440px){
+  
+.FlowerBox, .StarBox, .FlowerYBox, .StarYBox {
+    width: 180px;
+    height: 180px;
+}
+
+}
+
+
+@media (max-width: 1440px){
+  
+.main{
+width: 100%;
+}
+
+.ContainerText1{
+    top: 500px;
+    width: 300px;
+    justify-content: left;
+}
+
+.Text1{
+    font-size: 24px;
+    left: 20px;
+}
+
+.FlowerBox, .StarBox, .FlowerYBox, .StarYBox {
+    width: 13vw;
+    height: 13vw;
+}
+
+.mbody {
+    display:none;
+}
+
+}
+
+@media (max-width: 680px){
+  
+.main{
+width: 100%;
+}
+
+.ContainerFlowers{
+    margin-left: 170px;
+    gap: 15px;
+}
+
+.FlowerBox, .StarBox {
+    width: 18vw;
+    height: 18vw;
+}
+
+.ContainerText1{
+    top: 250px;
+    justify-content: left;
+}
+
+.Text1{
+    font-size: 24px;
+    text-align: left;
+    left: 20px;
+}
+
+.ContainerText2{
+    left: -50px;
+}
+
+.Text2{
+    left: 0px;
+}
+
+.Point{
+    display: none ;
+}
+
+.Block_girl {
+    width: 80vw;
+    height: 500px;
+}
+
+.image1{
+    width: 70%;
+}
+
+.TextMBig{
+    font-size: 80px;
+}
+
+
+}
+
+@media (max-width: 400px){
+.Text1{
+    font-size: 20px;
+    line-height: 24px;
+}
+.Text2{
+    font-size: 20px;
+    line-height: 24px;
+}
+}
