@@ -51,7 +51,6 @@ body {
   flex: 1;
   flex-wrap: wrap;
   margin: 10px;
-  max-width: 450px; 
   /* justify-content: start; 
   align-items: start; */
   z-index: 1;
@@ -643,5 +642,6 @@ svg path {
     z-index: 11;
     background-size: contain;
 }
+
 
 
