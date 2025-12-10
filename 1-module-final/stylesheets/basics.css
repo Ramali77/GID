@@ -490,7 +490,7 @@ svg path {
 
 
 .LineElementB {
-  background-color: #000000;
+  background-color: #cdf9fb;
   display: flex;
   width: 110vw;
   animation: LineElement 1s linear infinite;
@@ -643,4 +643,5 @@ svg path {
     z-index: 11;
     background-size: contain;
 }
+
 
